@@ -13,6 +13,7 @@ import {
   Animated,
   Keyboard
 } from 'react-native';
+import dismissKeyboard from 'dismissKeyboard';
 import Style from './style';
 import Moment from 'moment';
 
@@ -252,7 +253,8 @@ class DatePicker extends Component {
       return true;
     }
 
-    Keyboard.dismiss();
+    //Keyboard.dismiss();
+    dismissKeyboard()
 
     // reset state
     this.setState({
